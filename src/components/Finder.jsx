@@ -1,7 +1,11 @@
 import React from 'react'
+import DragList from './dragAndDrop/DragList'
+
 
 export default function Finder() {
   return (
-    <div>Finder</div>
+
+<DragList/>
+
   )
 }
