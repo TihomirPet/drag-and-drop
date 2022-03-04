@@ -1,7 +1,8 @@
 import React from 'react'
+import BarChart from './chart/BarChart';
 import DragList from './dragAndDrop/DragList'
 import TaskList from './task/TaskList'
-import ChartBar from './chart/ChartBar';
+
 
 
 export default function Finder() {
@@ -9,7 +10,7 @@ export default function Finder() {
     <>
       {/* <DragList />
       <TaskList /> */}
-      <ChartBar/>
+   <BarChart/>
     </>
   );
 }
