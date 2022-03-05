@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import {Bar } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
@@ -7,6 +7,26 @@ Chart.register(...registerables);
 
 
 export default function ChartBar() {
+
+  const[feedback,setFeedback]=useState([])
+
+useEffect(()=>{
+  fetchFeedback()
+},[])
+
+
+
+  const fetchFeedback =async ()=>{
+let testA = []
+
+    const response = await fetch('http://localhost:5000/feedback');
+    const data =await response.json()
+  console.log(data);
+    setFeedback(data);
+
+    
+  
+  }
   
  const options = {
  
@@ -26,20 +46,22 @@ export default function ChartBar() {
 
 
  let data = {
-   labels: [' Hold', 'Submitted', 'In Production', 'Shipped'],
+   labels: [' Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
    datasets: [
-     {
-       data: [1],
-       backgroundColor: '#F2CC59',
-     },
-     {
-       data: [1],
-       backgroundColor: '#BA68C8',
-     },
-     {
-       data: [1],
-       backgroundColor: '#407BFF',
-     },
+     //  {
+     //    data: [1],
+     //    backgroundColor: '#F2CC59',
+     //  },
+     //  {
+     //    data: [1],
+     //    backgroundColor: '#BA68C8',
+     //  },
+     //  {
+     //    data: [1],
+     //    backgroundColor: '#407BFF',
+     //  },
+
+     { data: feedback.map((item) => item.parent), backgroundColor: '#126799' },
    ],
  };
   return (
