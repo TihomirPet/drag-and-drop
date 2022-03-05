@@ -106,7 +106,7 @@ export default function DragList() {
           className='board  col-4 p-1 border border-warning'
           onDragOver={(e) => dragOverHandler(e)}
           onDrop={(e) => dropCardHandler(e, board)}>
-          <div className='board_title'>{board.title}</div>
+          <div className='board_title mb-5'>{board.title}</div>
 
           {board.items.map((item) => (
             <div
