@@ -9,11 +9,11 @@ import TaskList from './task/TaskList'
 export default function Finder() {
   return (
     <>
-      {/* <DragList /> */}
+      <DragList />
       {/* <TaskList /> */}
    {/* <BarChart/> */}
 
-   <DragListC/>
+   {/* <DragListC/> */}
     </>
   );
 }
