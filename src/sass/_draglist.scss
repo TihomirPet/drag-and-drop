@@ -1,0 +1,12 @@
+.droppable-col{
+    // height: 5vh;
+}
+.item{
+    height: 5vh
+    ;
+    border: 1px solid rgb(162, 0, 255);
+   
+}
+ .item.dragging {
+        background-color: rgb(127, 187, 255);
+    }
