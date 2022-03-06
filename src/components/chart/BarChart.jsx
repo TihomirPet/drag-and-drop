@@ -17,7 +17,7 @@ useEffect(()=>{
 
 
   const fetchFeedback =async ()=>{
-let testA = []
+
 
     const response = await fetch('http://localhost:5000/feedback');
     const data =await response.json()
