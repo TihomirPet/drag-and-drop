@@ -3,23 +3,32 @@ import { NavLink } from 'react-router-dom';
 
 export default function Header({text}) {
   return (
-    <div>
-      <h3>{text}</h3>
+    <div className='container-fluid mb-3'>
+      <h3 className='mt-5 mb-4'>{text}</h3>
 
       <nav className='main-navigation'>
-        <NavLink to='/' activeclassname='active'>
+        <NavLink to='/' activeclassname='active' className='text-white btn'>
           Start
         </NavLink>
 
-        <NavLink to='/barchart' activeclassname='active'>
-          barchart
+        <NavLink
+          className='text-white btn'
+          to='/barchart'
+          activeclassname='active'>
+          Barchart
         </NavLink>
-  
-        <NavLink to='/dragList' activeclassname='active'>
+
+        <NavLink
+          className='text-white btn'
+          to='/dragList'
+          activeclassname='active'>
           DragList
         </NavLink>
-        <NavLink to='/draglistc' activeclassname='active'>
-          draglistc
+        <NavLink
+          to='/draglistc'
+          activeclassname='active'
+          className='text-white btn'>
+          Draglistc
         </NavLink>
       </nav>
     </div>

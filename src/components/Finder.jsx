@@ -1,6 +1,6 @@
 import React from 'react';
 import BarChart from './chart/BarChart';
-import Drag from './chart/draggableelement/Drag';
+import Drag from './draggableelement/Drag';
 import DragListC from './dragAndDrop copy/DragListC';
 import DragList from './dragAndDrop/DragList';
 import Header from './header/Header';
@@ -11,7 +11,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 export default function Finder() {
   return (
     <>
-
       {/* <DragList /> */}
       {/* <TaskList /> */}
       {/* <BarChart/> */}
@@ -21,15 +20,14 @@ export default function Finder() {
       {/* <Drag /> */}
 
       <Router>
-        <Header text='APP - TITLE' />
-
         <div className='container-fluid'>
+          <Header text='APP - TITLE' />
+
           <Routes>
             <Route
               path='/'
               element={
                 <>
-                
                   <TaskList />
                 </>
               }></Route>

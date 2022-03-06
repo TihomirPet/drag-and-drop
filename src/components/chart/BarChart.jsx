@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import db from '../../db';
 
 import {Bar } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
@@ -8,25 +9,25 @@ Chart.register(...registerables);
 
 export default function ChartBar() {
 
-  const[feedback,setFeedback]=useState([])
+  const[feedback,setFeedback]=useState(db)
 
-useEffect(()=>{
-  fetchFeedback()
-},[])
-
-
-
-  const fetchFeedback =async ()=>{
+// useEffect(()=>{
+//   fetchFeedback()
+// },[])
 
 
-    const response = await fetch('http://localhost:5000/feedback');
-    const data =await response.json()
-  console.log(data);
-    setFeedback(data);
+
+//   const fetchFeedback =async ()=>{
+
+
+//     const response = await fetch('http://localhost:5000/feedback');
+//     const data =await response.json()
+//   console.log(data);
+//     setFeedback(data);
 
     
   
-  }
+//   }
   
  const options = {
  
