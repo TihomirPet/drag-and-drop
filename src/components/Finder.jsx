@@ -32,11 +32,11 @@ export default function Finder() {
                 </>
               }></Route>
 
-            <Route path='/draglist' element={<DragList />} />
-            <Route path='/barchart/*' element={<BarChart />} />
+            {/* <Route path='/draglist' element={<DragList />} />
+            <Route path='/barchart/*' element={<BarChart />} /> */}
             <Route path='/drag/*' element={<Drag />} />
             <Route path='/draglist/*' element={<DragList />} />
-            <Route path='/draglistc/*' element={<DragListC />} />
+            {/* <Route path='/draglistc/*' element={<DragListC />} /> */}
           </Routes>
         </div>
       </Router>

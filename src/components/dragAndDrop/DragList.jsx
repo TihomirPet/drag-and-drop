@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DragItems from './DragItems';
 
+
 export default function DragList() {
   const [boards, setBoards] = useState([
     {
@@ -119,6 +120,8 @@ export default function DragList() {
               className='item'
               draggable={true}>
               {item.title}
+
+     
             </div>
           ))}
         </div>
